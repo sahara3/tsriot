@@ -1,0 +1,38 @@
+{
+  "name": "tsriot",
+  "version": "0.0.1",
+  "description": "Riot.js with TypeScript.",
+  "author": "sahara3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahara3/tsriot.git"
+  },
+  "bugs": "https://github.com/sahara3/tsriot/issues",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm-run-all clean build:tsc build:rollup build:compiler",
+    "build:tsc": "tsc",
+    "build:rollup": "rollup -c",
+    "build:compiler": "shx cp src/compiler.js lib/ && shx chmod +x lib/compiler.js",
+    "clean": "shx rm -rf lib && shx mkdir -p lib"
+  },
+  "main": "./lib/index.js",
+  "jsnext:main": "./lib/tsriot.js",
+  "types": "./lib/tsriot.d.ts",
+  "bin": {
+    "tsriot": "./lib/compiler.js"
+  },
+  "dependencies": {
+    "less": "^2.7.3",
+    "riot": "^3.7.4"
+  },
+  "devDependencies": {
+    "@types/riot": "^3.6.1",
+    "npm-run-all": "^4.1.2",
+    "rollup": "^0.52.0",
+    "rollup-plugin-buble": "^0.18.0",
+    "shx": "^0.2.2",
+    "typescript": "^2.6.1"
+  }
+}
