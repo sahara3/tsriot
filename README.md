@@ -1,10 +1,6 @@
 # tsriot
 It is a small extension for writing Riot.js script with TypeScript.
 
-[![NPM version][npm-version-image]][npm-url]
-[![NPM downloads][npm-downloads-image]][npm-url]
-[![MIT License][license-image]][license-url]
-
 Tag layout (HTML with style) and logic can be written as separate files. This makes it easier for IDE to assist source code development.
 It is effective when you want to attract the benefits of TypeScript's type system, such as when developing with multiple people.
 
@@ -114,4 +110,4 @@ Copyright (c) 2017 Joylei<leingliu@gmail.com>
 ```
 
 ## License
-MIT
+MIT. See LICENSE file for details.
