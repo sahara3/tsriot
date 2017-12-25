@@ -7,6 +7,7 @@
     "declarationDir": "./lib/",
     "removeComments": false,
     "noEmit": false,
+    "newLine": "LF",
 
     /* Strict Type-Checking Options */
     "strict": true,

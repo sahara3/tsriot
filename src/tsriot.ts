@@ -2,7 +2,9 @@ import * as riot from 'riot';
 
 export class Observable implements riot.Observable {
     constructor() {
-        // empty by default.
+        if (!(this instanceof Tag)) {
+            riot.observable(this);
+        }
     }
 
     on: (event: string, callback: riot.ObservableCallback) => this;
@@ -29,7 +31,6 @@ export class Tag<O = any> extends Observable implements riot.TagInterface {
 
     constructor() {
         super();
-        // empty by default.
     }
 
     init() {
@@ -45,12 +46,10 @@ export class Tag<O = any> extends Observable implements riot.TagInterface {
     unmount: (keepTheParent?: boolean) => void;
 }
 
-interface RiotEvent extends Event {
+export interface DomEvent extends Event {
     item?: any; // current element in loop.
     which: number;
 }
-export { RiotEvent as Event };
-
 
 export function tag<T extends riot.TagInterface = any>(tagName: string, html: string, css?: string, attrs?: string, constructor?: (this: T, opts?: any) => void): string {
     return riot.tag(tagName, html, css, attrs, constructor);
