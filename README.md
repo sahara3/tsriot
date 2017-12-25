@@ -42,7 +42,7 @@ class HelloWorldTag extends tsriot.Tag {
     this.name = 'world';
   }
 
-  edit(e: tsriot.Event) {
+  edit(e: tsriot.DomEvent) {
     this.name = (<HTMLInputElement>event.target).value;
   }
 }
@@ -62,6 +62,8 @@ tsriot hello-world.html > hello-wold-tag.ts
 ```
 
 tsriot command outputs TypeScript source code like original riot command do so.
+
+For more examples, see [tsriot examples](https://github.com/sahara3/tsriot-examples).
 
 ## Restrictions
 Currently, only the following custom parsers are supported.
