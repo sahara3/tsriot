@@ -5,35 +5,30 @@
     "outDir": "./lib/",
     "declaration": true,
     "declarationDir": "./lib/",
-    "removeComments": false,
+    "removeComments": true,
     "noEmit": false,
     "newLine": "LF",
-
     /* Strict Type-Checking Options */
     "strict": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "strictFunctionTypes": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-
     /* Additional Checks */
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
-
     /* Module Resolution Options */
     "moduleResolution": "node",
     "baseUrl": "./lib/",
-
     /* Source Map Options */
-    "sourceMap": false,
+    "sourceMap": true,
     // "sourceRoot": "./",
     // "mapRoot": "./",
     "inlineSourceMap": false,
     "inlineSources": false
-
     /* Experimental Options */
     // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */

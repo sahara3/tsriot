@@ -49,12 +49,13 @@ export class Tag<O = any> extends Observable implements riot.TagInterface {
 export interface DomEvent extends Event {
     item?: any; // current element in loop.
     which: number;
+    preventUpdate?: boolean;
 }
 
 export function tag<T extends riot.TagInterface = any>(tagName: string, html: string, css?: string, attrs?: string, constructor?: (this: T, opts?: any) => void): string {
     return riot.tag(tagName, html, css, attrs, constructor);
 }
 
-export function mixin<T extends riot.TagInterface, S extends Tag>(tag: T, tagClass: {new(): S; }): void {
+export function mixin<T extends riot.TagInterface, S extends Tag>(tag: T, tagClass: { new(): S; }): void {
     tag.mixin(new tagClass());
 }
