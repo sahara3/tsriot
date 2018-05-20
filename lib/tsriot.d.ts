@@ -23,6 +23,7 @@ export declare class Tag<O = any> extends Observable implements riot.TagInterfac
 export interface DomEvent extends Event {
     item?: any;
     which: number;
+    preventUpdate?: boolean;
 }
 export declare function tag<T extends riot.TagInterface = any>(tagName: string, html: string, css?: string, attrs?: string, constructor?: (this: T, opts?: any) => void): string;
 export declare function mixin<T extends riot.TagInterface, S extends Tag>(tag: T, tagClass: {
