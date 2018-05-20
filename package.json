@@ -24,7 +24,7 @@
     "tsriot": "./lib/compiler.js"
   },
   "dependencies": {
-    "less": "^2.7.3",
+    "less": "^3.0.4",
     "riot": "~3.9.5"
   },
   "devDependencies": {
